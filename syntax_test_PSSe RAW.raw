@@ -1,0 +1,29 @@
+@! SYNTAX TEST "PSSe RAW.sublime-syntax"
+
+@!IC, SBASE,REV,XFRRAT,NXFRAT,BASFRQ
+@!<- punctuation.definition.comment.psse_raw
+@!<- comment.line.psse_raw punctuation.definition.comment.psse_raw
+@!^^^ comment.line.psse_raw
+
+
+
+2015,'A DEVICE    ', 400.0000,1,   2,  27, 265,
+@!<- constant.numeric.psse_raw
+@!  ^ source.psse_raw
+@!   ^ string.quoted.single.psse_raw punctuation.definition.string.begin.psse_raw
+@!   ^^^^^^^^^^^^^^ string.quoted.single.psse_raw
+@!                ^ punctuation.definition.string.begin.psse_raw
+@!                   ^^^^^^^^ constant.numeric.psse_raw
+
+
+0 /  some ending message
+@!<- constant.numeric.psse_raw
+@!^ punctuation.definition.comment.psse_raw
+@! ^^^^^^^^^^^^^^^^^^^^^^^ comment.line.psse_raw
+
+Q
+@!<- keyword.control.psse_raw
+@!^ keyword.block.psse_raw
+
+
+@!<- comment.block.psse_raw
