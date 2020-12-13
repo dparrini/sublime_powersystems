@@ -1,0 +1,15 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: PSSe RAW
+fileTypes: [raw]
+scopeName: source.psse_raw
+
+
+patterns:
+  # PSSE keywords
+  - match: "^(Q)"
+    name: keyword.control.psse_raw
+
+  # PSSE RAW line comment
+  - match: "^(@!)\\s(.*)$"
+    name: comment.line.opendss
